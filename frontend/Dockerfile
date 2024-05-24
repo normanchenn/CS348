@@ -1,14 +1,13 @@
-# node base image
-FROM node:14
+FROM node:18-alpine
 
-# copy in package json
-COPY package*.json ./
+WORKDIR /app
 
-# isnstall dependencies
+COPY package.json .
+
 RUN npm install
 
-# build
-# RUN npm run build
+COPY . .
 
-# start nginx
-CMD ["nginx", "-g", "daemon off;"]
+EXPOSE 8080
+
+CMD [ "npm", "run", "dev" ]
