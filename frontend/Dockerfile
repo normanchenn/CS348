@@ -8,10 +8,7 @@ COPY package*.json ./
 RUN npm install
 
 # build
-RUN npm run build
-
-# copy setup
-COPY --from=0 /app/build /usr/share/nginx/html
+# RUN npm run build
 
 # start nginx
 CMD ["nginx", "-g", "daemon off;"]

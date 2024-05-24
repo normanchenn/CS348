@@ -11,21 +11,22 @@ services:
     ports:
       - "5432:5432"
 
-  # backend:
-  #   volumes:
-  #     - ./backend:/backend
-  #   working_dir: /backend
-  #   ports:
-  #     - "8080:80"
+  backend:
+    image: python:3.11-alpine
+    volumes:
+      - ./backend:/backend
+    working_dir: /backend
+    ports:
+      - "8080:80"
 
-  # frontend:
-  #   build:
-  #     context: frontend/
-  #     dockerfile: Dockerfile
-  #   volumes:
-  #     - ./frontend:/frontend
-  #   ports:
-  #     - "3000:80"
+  frontend:
+    build:
+      context: frontend/
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend:/frontend
+    ports:
+      - "3000:80"
 
 volumes:
   dbdata:
