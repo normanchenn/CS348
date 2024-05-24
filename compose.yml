@@ -27,6 +27,3 @@ services:
       - ./frontend:/frontend
     ports:
       - "3000:80"
-
-volumes:
-  dbdata:
