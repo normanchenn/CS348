@@ -5,3 +5,7 @@ itsdangerous==2.2.0
 Jinja2==3.1.4
 MarkupSafe==2.1.5
 Werkzeug==3.0.3
+pylint===3.2.2
+pytest===8.0.2
+pytest-cov===4.1.0
+pytest-env===1.1.3
