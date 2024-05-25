@@ -12,13 +12,12 @@ services:
       - "5432:5432"
 
   backend:
-    image: python:3.11-alpine
+    build:
+      context: ./backend
     volumes:
-      - ./backend:/backend
-    working_dir: /backend
+      - ./backend:/app
     ports:
-      - "8080:80"
-    command: sh -c "pip install -r requirements.txt"
+      - "5000:5000"
 
   frontend:
     build:

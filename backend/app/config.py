@@ -10,10 +10,8 @@ class Config:
 
 
 class ProductionConfig(Config):
-    DEBUG = False
     DATABASE_URL = os.getenv("PRODUCTION_DATABASE_URL")
 
 
 class DevelopmentConfig(Config):
-    DEBUG = True
     DATABASE_URL = os.getenv("DEVELOPMENT_DATABASE_URL")
