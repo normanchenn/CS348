@@ -1,3 +1,8 @@
+"""
+Init file for Flask
+"""
+
+# Imports
 import os
 from flask import Flask
 from .config import DevelopmentConfig, ProductionConfig
@@ -6,6 +11,11 @@ from .routes.main import main as main_blueprint
 
 
 def create_app():
+    """Creates the flask app
+
+    Returns:
+        app (Flask): flask app
+    """
     app = Flask(__name__)
 
     if os.getenv("FLASK_ENV") == "production":
