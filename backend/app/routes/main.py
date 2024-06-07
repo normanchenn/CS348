@@ -1,3 +1,7 @@
+"""
+Entry point for the flask routes
+"""
+
 from flask import Blueprint
 
 main = Blueprint("main", __name__)
