@@ -1,3 +1,7 @@
+"""
+Configuration of Flask backend
+"""
+
 import os
 from dotenv import load_dotenv
 
